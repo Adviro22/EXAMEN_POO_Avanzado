@@ -9,7 +9,7 @@ export function Navbar() {
   return (
     <nav className="bg-orange-400 my-3 flex justify-between py-5 px-10 rounded-lg ">
       <h1 className="text-2xl font-bold">
-        <Link to={isAuthenticated ? "/products" : "/"}>Productos</Link>
+        <Link to={isAuthenticated ? "/products" : "/"}>CLIENTES</Link>
       </h1>
       <ul className="flex gap-x-2">
         {isAuthenticated ? (

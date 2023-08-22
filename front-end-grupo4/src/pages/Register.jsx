@@ -52,7 +52,21 @@ export default function Register() {
           {errors.username && (
             <p className="text-red-500 font-semibold">{errors.username.message}</p>
           )}
-
+          <label htmlFor="cedula:" className="text-md block my-1 text-black">
+            Cedula:
+          </label>
+          <input
+            className="w-full bg-white px-4 py-2 rounded-md text-black"
+            type="string"
+            name="cedula"
+            placeholder="Escriba su mail..."
+            {...register("cedula", {
+              required: { value: true, message: "Cedula es requerido" },
+            })}
+          />
+          {errors.email && (
+            <p className="text-red-500 font-semibold">{errors.email.message}</p>
+          )}
           <label htmlFor="email:" className="text-md block my-1 text-black">
             Email:
           </label>

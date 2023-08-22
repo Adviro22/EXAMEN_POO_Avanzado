@@ -2,7 +2,7 @@ import { useClients } from "../../context/ProductContext";
 import { Button, ButtonLink, Card } from "../ui";
 
 export function ProductCard({ client }) {
-  const { deleteProduct } = useClients();
+  const { deleteClient } = useClients();
 
   return (
     <Card>
@@ -22,7 +22,7 @@ export function ProductCard({ client }) {
       </p>
       <br />
       <div className="flex gap-x-2 items-center">
-        <Button onClick={() => deleteProduct(client._id)}>Delete</Button>
+        <Button onClick={() => deleteClient(client._id)}>Delete</Button>
         <ButtonLink to={`/product/${client._id}`}>Edit</ButtonLink>
       </div>
     </Card>
